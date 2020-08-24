@@ -52,17 +52,28 @@ program. `Fork`, and `clone` this repository.
 Look inside each directory for a sample file
 or a guide.
 
+You should create a patch branch in this repository.
+The patch branch should contain a patched version of 
+your program. 
+
+[NOTE]
+--
+The patched program should pass all 
+your tests.
+--
+
 == Submission checklist
 
 * [ ] Reviewed the assignment Rubrics in BB.
 * [ ] Demo program repository is linked in the presentation.
 * [ ] Tests cover program functionality and security bug.
+* [ ] A patched version of the program is created in the patch branch.
+* [ ] The patched program passes all tests.
 * [ ] `Readme` is updated with program description, how to run the program, how to detect, exploit and patch the bug.
 * [ ] Unnecessary template files and guides are removed.
 * [ ] Presentation is submitted to BB.
 * [ ] Presentation video recording is shared with the unit instructor.
 
-
 == License
 
-include::LICENSE[]
+See link:LICENSE[]
