@@ -8,7 +8,7 @@ to detect and finally how to mitigate it.
 
 . Slides: You will make slides for your presentation.
 . Demo program: You will develop a program to support your presentation.
-. Recoding: You will record your presentation in a video file. In your presentation, you talk through your slides and demo how to detect, exploit and patch the security bug.
+. Recording: You will record your presentation in a video file. In your presentation, you talk through your slides and demo how to detect, exploit and patch the security bug.
 
 == Recording
 
@@ -16,6 +16,12 @@ Your recording should include both your audio and camera feed.
 
 Use https://echo360.org.au/ to record
 your presentation or upload your presentation video file.
+
+In order to share your presentation, you will need to do the following:
+
+. Click to actually view the recording in Echo360.
+. Once the video page opens up, click the "Share" button on the bottom of the video.
+. You should be able to share it to an individual, so just share it with Pedram. (`Pedram.Hayati@curtin.edu.au`).
 
 [NOTE]
 --
@@ -55,6 +61,11 @@ or a guide.
 You should create a patch branch in this repository.
 The patch branch should contain a patched version of 
 your program. 
+
+[NOTE]
+--
+The sample files use Flask as an example as that is what you're accustomed to from your labs. Feel free to write your program in anything.
+--
 
 [NOTE]
 --
