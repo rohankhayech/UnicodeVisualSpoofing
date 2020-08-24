@@ -14,10 +14,12 @@ to detect and finally how to mitigate it.
 
 Your recording should include both your audio and camera feed.
 
-Use https://echo360.org.au/ to record
+Login to https://echo360.org.au/ with your student email to record
 your presentation or upload your presentation video file.
 
-In order to share your presentation, you will need to do the following:
+Once you finish recording share your presentation, 
+with the unit instructor.
+You will need to do the following:
 
 . Click to view the recording in Echo360.
 . Click on "Share" button below the video playback.
