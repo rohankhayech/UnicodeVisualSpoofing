@@ -19,14 +19,15 @@ your presentation or upload your presentation video file.
 
 In order to share your presentation, you will need to do the following:
 
-. Click to actually view the recording in Echo360.
-. Once the video page opens up, click the "Share" button on the bottom of the video.
-. You should be able to share it to an individual, so just share it with Pedram. (`Pedram.Hayati@curtin.edu.au`).
+. Click to view the recording in Echo360.
+. Click on "Share" button below the video playback.
+. Under 'Individual', 'Share with:', enter the unit instructor email and press 'Done'.
 
 [NOTE]
 --
-OBS Studio is a good tool to record your 
+. OBS Studio is a good tool to record your 
 presentation offline. 
+. You can find unit instructor email in BB, Contacts.
 --
 
 == Slides
@@ -58,41 +59,40 @@ to demonstrate. You should write tests that cover all the functionality within
 your program (these tests are later used to verify that the patched version
 hasn't lost any functionality).
 
+You should create a patch branch in this repository.
+The patch branch should contain a patched version of 
+your program. 
+
 Along with your demo program, you should provide a proof of concept to
 demonstrate the vulnerability. This can be done in one of two ways:
 
-. If you are able to write a test case as a proof of concept, then feel free
-to do that.
-** You are allowed to use any method to demonstrate this. 
-. For more complex proof of concepts, feel free to write a guide that walks
-through how the vulnerability could be triggered. You are allowed to use
-and talk about any external tools you may make use of.
+. Unit/Integration test: If you are able to write a test (unit test or integration test) that shows
+the security bug and later it fails. The test fails because the program is vulnerable.
+Your patched program will pass this test. 
+. External tool: Write a step-by-step shows 
+how the vulnerability could be triggered and exploited. Include this guide
+in the `readme`
 
 Use this repository as a template for your demo
 program. `Fork`, and `clone` this repository.
 Look inside each directory for a sample file
 or a guide.
 
-You should create a patch branch in this repository.
-The patch branch should contain a patched version of 
-your program. 
-
 [NOTE]
 --
-The sample files use Flask as an example as that is what you're accustomed to from your labs. Feel free to write your program in anything.
---
-
-[NOTE]
---
-The patched program should pass all 
+. Flask and JavaScript are used as examples. You are free to choose
+any programming language or framework to make your program.
+. The patched program should pass all 
 your tests.
+. Use `DockerFile` and `MakeFile` to make your program portable and easy to
+run.
 --
 
 == Submission checklist
 
 * [ ] Reviewed the assignment Rubrics in BB.
 * [ ] Demo program repository is linked in the presentation.
-* [ ] Tests cover program functionality and security bug.
+* [ ] Tests cover program functionality tests.
 * [ ] A patched version of the program is created in the patch branch.
 * [ ] The patched program passes all tests.
 * [ ] `Readme` is updated with program description, how to run the program, how to detect, exploit and patch the bug.

@@ -11,7 +11,7 @@ It should include::
 .test_flaskr.py
 [source,python]
 ----
-// Guide: https://flask.palletsprojects.com/en/1.1.x/testing/
+# Guide: https://flask.palletsprojects.com/en/1.1.x/testing/
 import os
 import tempfile
 
@@ -38,6 +38,7 @@ def client():
 [source,javascript]
 ----
 // Guide: https://jestjs.io/
+// Test for Integer Overflow
 const request = require('supertest');
 const { app, approval } = require('./app');
 
