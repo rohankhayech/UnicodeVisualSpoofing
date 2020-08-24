@@ -53,6 +53,21 @@ and include pros and cons of each patch.
 
 == Demo program
 
+The demo program should contain the vulnerability that your group has chosen
+to demonstrate. You should write tests that cover all the functionality within
+your program (these tests are later used to verify that the patched version
+hasn't lost any functionality).
+
+Along with your demo program, you should provide a proof of concept to
+demonstrate the vulnerability. This can be done in one of two ways:
+
+. If you are able to write a test case as a proof of concept, then feel free
+to do that.
+** You are allowed to use any method to demonstrate this. 
+. For more complex proof of concepts, feel free to write a guide that walks
+through how the vulnerability could be triggered. You are allowed to use
+and talk about any external tools you may make use of.
+
 Use this repository as a template for your demo
 program. `Fork`, and `clone` this repository.
 Look inside each directory for a sample file
