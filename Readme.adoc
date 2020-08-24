@@ -1,0 +1,68 @@
+= ISEC3004 assignment
+
+In this assignment you will make 30 minutes recorded presentation on a security bug. 
+You will show what the security bug is, how
+to detect and finally how to mitigate it.
+
+== Submission
+
+. Slides: You will make slides for your presentation.
+. Demo program: You will develop a program to support your presentation.
+. Recoding: You will record your presentation in a video file. In your presentation, you talk through your slides and demo how to detect, exploit and patch the security bug.
+
+== Recording
+
+Your recording should include both your audio and camera feed.
+
+Use https://echo360.org.au/ to record
+your presentation or upload your presentation video file.
+
+[NOTE]
+--
+OBS Studio is a good tool to record your 
+presentation offline. 
+--
+
+== Slides
+
+Your slides must, at least, include the following
+sections. You can include additional sections.
+
+. Title: Vulnerability, your names, and link to the demo program repository
+. Background: Background knowledge necessary to understand
+the vulnerability. For example if your topic is DOM-based XSS
+you should explain Document Object Model and
+how JavaScript libraries can use it, what are Events, etc.
+. Vulnerability definition: describe the vulnerability,
+describe the issue and provide a simple example with a pseudo/real code
+. Impact: Describe possible impacts of the vulnerability
+. Real-world incident: Describe a real-world incident of 
+the vulnerability being exploited in the wild.
+. Detection: Describe how to detect the vulnerability
+through static analysis (code review) and run-time analysis
+. Prevention: Describe multiple ways to patch the vulnerability
+and include pros and cons of each patch.
+. Conclusion
+. References
+
+== Demo program
+
+Use this repository as a template for your demo
+program. `Fork`, and `clone` this repository.
+Look inside each directory for a sample file
+or a guide.
+
+== Submission checklist
+
+* [ ] Reviewed the assignment Rubrics in BB.
+* [ ] Demo program repository is linked in the presentation.
+* [ ] Tests cover program functionality and security bug.
+* [ ] `Readme` is updated with program description, how to run the program, how to detect, exploit and patch the bug.
+* [ ] Unnecessary template files and guides are removed.
+* [ ] Presentation is submitted to BB.
+* [ ] Presentation video recording is shared with the unit instructor.
+
+
+== License
+
+include::LICENSE[]
