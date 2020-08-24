@@ -6,6 +6,7 @@ all: build
 
 build:
 	docker build --rm --tag=$(APP) .
+	docker image prune -f
 
 test:
 	docker run -it --rm $(APP) python manage.py test
