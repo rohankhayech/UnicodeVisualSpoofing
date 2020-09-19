@@ -5,11 +5,13 @@ package model;
  * 
  * Superclass can be caught to handle this exception in the UI.
  * @see RegistrationException
+ * 
+ * @author Rohan Khayech
  */
 public class UsernameTakenException extends RegistrationException {
 
     public UsernameTakenException() {
-        super();
+        super("Username already taken.");
     }
 
     public UsernameTakenException(String message) {

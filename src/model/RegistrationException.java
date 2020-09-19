@@ -6,14 +6,16 @@ package model;
  * A specific subclass should be thrown when appropriate.
  * @see UsernameTakenException
  * @see PasswordMismatchException
+ * 
+ * @author Rohan Khayech
  */
 public class RegistrationException extends Exception {
 
     public RegistrationException() {
-        super();
+        super("User could not be registered.");
     }
 
     public RegistrationException(String message) {
-        super(message);
+        super("User could not be registered: "+message);
     }
 }

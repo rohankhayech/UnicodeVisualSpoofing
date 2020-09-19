@@ -5,11 +5,13 @@ package model;
  * 
  * Superclass can be caught to handle this exception in the UI.
  * @see RegistrationException
+ * 
+ * @author Rohan Khayech
  */
 public class PasswordMismatchException extends RegistrationException {
 
     public PasswordMismatchException() {
-        super();
+        super("Passwords must match.");
     }
 
     public PasswordMismatchException(String message) {

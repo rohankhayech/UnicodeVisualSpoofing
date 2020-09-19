@@ -55,5 +55,9 @@ public class Post {
         this.body = body;
     }
 
+    @Override
+    public String toString() {
+        return author.toString()+": "+body;
+    }
     
 }

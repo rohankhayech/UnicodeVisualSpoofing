@@ -42,10 +42,16 @@ public class User {
     }
 
     /**
-     * @return The user's password.
+     * Checks if the given password matches the user's password.
+     * @param password The password to compare.
+     * @return {@code true} if the password matches, {@code false} otherwise.
      */
-    public String getPassword() {
-        return password;
+    public boolean passwordMatches(String password) {
+        if (password == this.password){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -59,7 +65,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [username=" + username + "]";
+        return username;
     }
 
    
