@@ -1,6 +1,6 @@
-package controller;
+package src.controller;
 
-import model.Forum;
+import src.model.Forum;
 
 public class Main {
     public static void main(String[] args) {

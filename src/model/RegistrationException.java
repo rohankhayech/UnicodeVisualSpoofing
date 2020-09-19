@@ -1,4 +1,4 @@
-package model;
+package src.model;
 
 /**
  * Exception thrown when a user cannot be registered.

@@ -1,4 +1,4 @@
-package model;
+package src.model;
 
 /**
  * The Post class represents a user's post on the web forum.

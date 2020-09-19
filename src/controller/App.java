@@ -1,10 +1,10 @@
-package controller;
+package src.controller;
 
-import model.Forum;
-import model.InvalidLoginException;
-import model.PasswordMismatchException;
-import model.RegistrationException;
-import model.User;
+import src.model.Forum;
+import src.model.InvalidLoginException;
+import src.model.PasswordMismatchException;
+import src.model.RegistrationException;
+import src.model.User;
 
 public class App {
     /** The forum object the app will interact with. */

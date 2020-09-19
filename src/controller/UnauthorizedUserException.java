@@ -1,4 +1,4 @@
-package controller;
+package src.controller;
 
 /**
  * Exception thrown when an operation involving the logged in user is performed without a user currently logged in.

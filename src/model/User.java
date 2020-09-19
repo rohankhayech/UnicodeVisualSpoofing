@@ -1,4 +1,4 @@
-package model;
+package src.model;
 
 /**
  * The user class represents a registered user of the web forum application.
