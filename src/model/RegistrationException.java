@@ -11,6 +11,8 @@ package src.model;
  */
 public class RegistrationException extends Exception {
 
+    private static final long serialVersionUID = 241018796766212949L;
+
     public RegistrationException() {
         super("User could not be registered.");
     }

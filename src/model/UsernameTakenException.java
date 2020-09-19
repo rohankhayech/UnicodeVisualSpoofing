@@ -10,6 +10,8 @@ package src.model;
  */
 public class UsernameTakenException extends RegistrationException {
 
+    private static final long serialVersionUID = 1375173284391065687L;
+
     public UsernameTakenException() {
         super("Username already taken.");
     }

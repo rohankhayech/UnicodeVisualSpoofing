@@ -7,6 +7,8 @@ package src.controller;
  */
 public class UnauthorizedUserException extends Exception {
 
+    private static final long serialVersionUID = -1966547855919386757L;
+
     public UnauthorizedUserException() {
         super("Invalid username or password.");
     }

@@ -7,6 +7,8 @@ package src.model;
  */
 public class InvalidLoginException extends Exception {
 
+    private static final long serialVersionUID = -6892014137707287833L;
+
     public InvalidLoginException() {
         super("Invalid username or password.");
     }

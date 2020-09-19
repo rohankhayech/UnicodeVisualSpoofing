@@ -10,6 +10,8 @@ package src.model;
  */
 public class PasswordMismatchException extends RegistrationException {
 
+    private static final long serialVersionUID = -8031376394544802709L;
+
     public PasswordMismatchException() {
         super("Passwords must match.");
     }
