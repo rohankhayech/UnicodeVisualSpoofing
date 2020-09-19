@@ -46,7 +46,7 @@ public class App {
      */
     public void publishPost(String body) throws UnauthorizedUserException {
         if (currentUser!=null) {
-            forum.addPost(currentUser,"body");
+            forum.addPost(currentUser,body);
         } else {
             throw new UnauthorizedUserException();
         }
@@ -66,6 +66,17 @@ public class App {
         } else {
             throw new PasswordMismatchException();
         }
+    }
+
+    /**
+     * @return The username of the currently logged in user or {@code null} if logged out.
+     */
+    public String getCurrentUser() {
+        String name = null;
+        if (currentUser != null) {
+            name = currentUser.getUsername();
+        }
+        return name;
     }
 
 }

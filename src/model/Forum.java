@@ -48,7 +48,7 @@ public class Forum {
      * @param username The username to check.
      * @return {@code true} if the user exists, {@code false} otherwise.
      */
-    private boolean userExists(String username) {
+    public boolean userExists(String username) {
         for (User u : users) {
             if (u.getUsername().toLowerCase().equals(username.toLowerCase())) {
                 return true;
