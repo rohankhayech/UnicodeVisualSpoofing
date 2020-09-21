@@ -6,6 +6,11 @@ import src.model.PasswordMismatchException;
 import src.model.RegistrationException;
 import src.model.User;
 
+/**
+ * The app contains the controller code to interact with the forum. It provides methods for the GUI to perform operations on the forum.
+ * 
+ * @author Rohan Khayech
+ */
 public class App {
     /** The forum object the app will interact with. */
     private Forum forum;

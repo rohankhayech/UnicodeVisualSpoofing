@@ -9,9 +9,9 @@ import java.util.*;
  */
 public class Forum {
     /** List of all the registered users on the forum. */
-    List<User> users;
+    private List<User> users;
     /** List of all the published posts on the forum. */
-    List<Post> posts;
+    private List<Post> posts;
 
     /**
      * Constructs a new forum object.
@@ -30,7 +30,7 @@ public class Forum {
 
     /**
      * Registers a new user on the forum.
-     * @param username The rew user's name.
+     * @param username The new user's name.
      * @param password The new user's password.
      * @throws UsernameTakenException When the given username is already taken by an existing user.
      */
