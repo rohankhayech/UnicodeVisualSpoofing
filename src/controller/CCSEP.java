@@ -5,15 +5,14 @@
  */
 package src.controller;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-//import src.resources.*;
-import src.view.*;
-
+import src.model.Forum;
+import src.view.LoginController;
 /**
  *
  * @author Jayden Tan
@@ -26,10 +25,12 @@ public class CCSEP extends Application {
 
         Parent root = loader.load();
 
-        //App app = new App();
-        //Forum forum = new Forum();
         
+        Forum forum = new Forum();
+        App app = new App(forum);
+
         LoginController loginController = (LoginController) loader.getController();
+        loginController.setApp(app);
 
         Scene scene = new Scene(root, 900, 600);
         
@@ -37,7 +38,6 @@ public class CCSEP extends Application {
         stage.setScene(scene);
         stage.show();
 
-        //loginController.setApp(app);
     }
 
     /**

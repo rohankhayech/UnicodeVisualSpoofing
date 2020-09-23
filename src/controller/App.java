@@ -35,6 +35,7 @@ public class App {
      */
     public void login(String username, String password) throws InvalidLoginException {
         currentUser = forum.provideLogin(username, password);
+        System.out.println("User Logged in");
     }
 
     /**
