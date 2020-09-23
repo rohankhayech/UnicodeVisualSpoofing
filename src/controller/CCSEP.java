@@ -11,7 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import src.resources.*
+//import src.resources.*;
 import src.view.*;
 
 /**
@@ -26,8 +26,8 @@ public class CCSEP extends Application {
 
         Parent root = loader.load();
 
-        App app = new App();
-        Forum forum = new Forum();
+        //App app = new App();
+        //Forum forum = new Forum();
         
         LoginController loginController = (LoginController) loader.getController();
 
@@ -37,7 +37,7 @@ public class CCSEP extends Application {
         stage.setScene(scene);
         stage.show();
 
-        loginController.setApp(app);
+        //loginController.setApp(app);
     }
 
     /**

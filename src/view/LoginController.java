@@ -62,7 +62,7 @@ public class LoginController implements Initializable {
     {
         //Call relevent login methods and display forum
             
-            app.login()
+            //app.login()
     } 
 
     public void setApp(App app) {
