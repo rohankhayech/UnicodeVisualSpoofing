@@ -47,7 +47,7 @@ public class User {
      * @return {@code true} if the password matches, {@code false} otherwise.
      */
     public boolean passwordMatches(String password) {
-        if (password == this.password){
+        if (password.equals(this.password)){
             return true;
         } else {
             return false;
