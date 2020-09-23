@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ccsep;
+package src.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
+import src.controller.App;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -20,6 +21,8 @@ import javafx.scene.control.TextField;
  * @author student
  */
 public class LoginController implements Initializable {
+
+    App app;
 
     @FXML
     private Text userText;
@@ -58,7 +61,13 @@ public class LoginController implements Initializable {
     private void handleLogin()
     {
         //Call relevent login methods and display forum
+            
+            app.login()
     } 
+
+    public void setApp(App app) {
+        this.app = app;
+    }
     
     
 }
