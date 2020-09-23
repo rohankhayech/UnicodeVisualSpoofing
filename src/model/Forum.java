@@ -80,10 +80,10 @@ public class Forum {
     public User provideLogin(String username, String password) throws InvalidLoginException {
         User user = findUser(username);
         if (user == null) {
-            throw new InvalidLoginException();
+            throw new InvalidLoginException("User does not exist.");
         } else {
             if (!user.passwordMatches(password)) {
-                throw new InvalidLoginException();
+                throw new InvalidLoginException("Password incorrect.");
             }
         }
         return user;
