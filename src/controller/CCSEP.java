@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import src.model.Forum;
+//import src.resources.login;
 import src.view.LoginController;
 /**
  *
@@ -21,7 +22,7 @@ public class CCSEP extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
 
         Parent root = loader.load();
 
