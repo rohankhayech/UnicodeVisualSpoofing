@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.view;
+package src.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,10 +18,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import src.controller.App;
+//import src.controller.App;
 import src.model.InvalidLoginException;
 import src.model.RegistrationException;
-
 
 /**
  * FXML Controller class
@@ -67,22 +66,27 @@ public class LoginController implements Initializable {
 
     @FXML
     private void handleLogin(ActionEvent event) {
-        Parent root1;
-        // Call relevent login methods and display forum page if successful 
+        // Call relevent login methods and display forum page if successful
         try {
             app.login(userLogin.getText(), passLogin.getText());
+            
             //Should load up the forum FXML (NOT WORKING ATM)
-            try {//
-                root1 = FXMLLoader.load(getClass().getClassLoader().getResource("/controller/forum.fxml"));
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("forum.fxml"));
+                Parent root = loader.load();
                 Stage stage = new Stage();
-                stage.setTitle("Forum Window");
-                stage.setScene(new Scene(root1, 600, 400));
+                Scene scene = new Scene(root);
+
+                ForumController forumController = (ForumController) loader.getController();
+                forumController.setApp(app);
+                
+                stage.setTitle("Forum (Vulnerable)");
+                stage.setScene(scene);
                 stage.show();
-                //Hides the current window (Login FMXL)
-                //((Node)(event.getSource())).getScene().getWindow().hide();
                 
             } catch (Exception e) {
-                System.err.println(e.getMessage());
+                e.printStackTrace();
+                //System.err.println(e.getMessage());
             }
         } catch (InvalidLoginException e) {
             loginError.setText(e.getMessage());

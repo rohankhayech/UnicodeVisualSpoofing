@@ -13,7 +13,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import src.model.Forum;
 //import src.resources.login;
-import src.view.LoginController;
+//import src.controller.LoginController;
 /**
  *
  * @author Jayden Tan
@@ -35,7 +35,7 @@ public class CCSEP extends Application {
 
         Scene scene = new Scene(root, 900, 600);
         
-        stage.setTitle("Vulnerable Application");
+        stage.setTitle("Login (Vulnerable)");
         stage.setScene(scene);
         stage.show();
 
