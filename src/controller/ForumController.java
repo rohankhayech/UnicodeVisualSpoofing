@@ -6,22 +6,54 @@
 package src.controller;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-//import src.controller.App;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import src.model.Forum;
+import src.model.Post;
 
 /**
  * FXML Controller class
  *
  * @author Jayden Tan
  */
-public class ForumController implements Initializable {
 
-
-    App app;
-    Forum forum;
-
+    public class ForumController implements Initializable 
+    {
+    
+        App app;
+        Forum forum;
+        List<Post> postList;
+        
+        @FXML
+        private TextField postField;
+    
+        @FXML
+        private Button postButton;
+    
+        @FXML
+        private TextField forumField;
+    
+        @FXML
+        void handlePost(ActionEvent event) {
+            /*try {
+                app.publishPost(postField.getText());
+                postList = forum.getPosts();
+                for (Post post: postList)
+                {
+                    forumField.setText(post.getBody());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }*/
+        }
+    
+    
     /**
      * Initializes the controller class.
      */

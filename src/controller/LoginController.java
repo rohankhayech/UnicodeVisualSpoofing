@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import src.model.Forum;
 //import src.controller.App;
 import src.model.InvalidLoginException;
 import src.model.RegistrationException;
@@ -69,16 +70,18 @@ public class LoginController implements Initializable {
         // Call relevent login methods and display forum page if successful
         try {
             app.login(userLogin.getText(), passLogin.getText());
-            
-            //Should load up the forum FXML (NOT WORKING ATM)
+            //Loads up the forum FXML
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("forum.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
 
+                Forum forum = new Forum();
+                App forumApp = new App(forum);
+
                 ForumController forumController = (ForumController) loader.getController();
-                forumController.setApp(app);
+                forumController.setApp(forumApp);
                 
                 stage.setTitle("Forum (Vulnerable)");
                 stage.setScene(scene);
