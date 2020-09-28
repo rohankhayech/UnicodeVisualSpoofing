@@ -26,7 +26,7 @@ import src.model.RegistrationException;
 /**
  * FXML Controller class
  *
- * @author student
+ * @author Jayden Tan
  */
 public class LoginController implements Initializable {
 
@@ -71,6 +71,9 @@ public class LoginController implements Initializable {
         // Call relevent login methods and display forum page if successful
         try {
             app.login(userLogin.getText(), passLogin.getText());
+            userLogin.clear();
+            passLogin.clear();
+
             //Loads up the forum FXML
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("forum.fxml"));
@@ -81,16 +84,26 @@ public class LoginController implements Initializable {
                 ForumController forumController = (ForumController) loader.getController();
                 forumController.setApp(app);
                 forumController.setForum(forum);
+                forumController.setup();
                 
                 stage.setTitle("Forum (Vulnerable)");
                 stage.setScene(scene);
-                stage.show();
+
+                //Hide the current window
+                ((Stage) loginButton.getScene().getWindow()).hide();
                 
+                //Open the forum window
+                stage.showAndWait();
+
+                //Reopen the window when done
+                ((Stage) loginButton.getScene().getWindow()).show();
+
             } catch (Exception e) {
                 e.printStackTrace();
                 //System.err.println(e.getMessage());
             }
         } catch (InvalidLoginException e) {
+            passLogin.clear();
             loginError.setText(e.getMessage());
         }
     }
@@ -102,6 +115,9 @@ public class LoginController implements Initializable {
         try {
             app.registerUser(userRegister.getText(), passRegister.getText(), confirmPassRegister.getText());
             registerError.setText("User successfully registered.");
+            userRegister.clear();
+            passRegister.clear();
+            confirmPassRegister.clear();
         } catch (RegistrationException e) {
             registerError.setText(e.getMessage());
         }    

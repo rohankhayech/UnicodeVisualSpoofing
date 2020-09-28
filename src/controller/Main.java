@@ -1,8 +1,5 @@
 package src.controller;
 
-//import src.model.Forum;
-
-
 /**
  * Main line for the application.
  */

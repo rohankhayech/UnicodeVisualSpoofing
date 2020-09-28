@@ -2,18 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.controller.ForumController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.controller.ForumController">
    <children>
-      <TextField fx:id="postField" alignment="CENTER" layoutX="96.0" layoutY="58.0" prefHeight="35.0" prefWidth="421.0" promptText="Enter Post" />
-      <TextField fx:id="forumField" layoutX="96.0" layoutY="155.0" prefHeight="193.0" prefWidth="421.0" />
-      <Button fx:id="postButton" layoutX="283.0" layoutY="108.0" mnemonicParsing="false" onAction="#handlePost" text="Post" />
-      <Label alignment="CENTER" layoutX="184.0" layoutY="14.0" prefHeight="18.0" prefWidth="243.0" text="Forum">
+      <Button fx:id="logoutButton" layoutX="463.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+      <TextArea fx:id="postField" layoutX="96.0" layoutY="58.0" prefHeight="128.0" prefWidth="422.0" promptText="Type your post here..." />
+      <Button fx:id="postButton" layoutX="285.0" layoutY="214.0" mnemonicParsing="false" onAction="#handlePost" text="Post" />
+      <Label layoutX="96.0" layoutY="14.0" prefHeight="30.0" prefWidth="66.0" text="Forum">
          <font>
             <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="forumField" layoutX="96.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="422.39999999999986" />
+      <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" layoutX="160.0" layoutY="14.0" prefHeight="30.0" prefWidth="290.0" text="Logged in as">
+         <font>
+            <Font size="14.0" />
          </font>
       </Label>
    </children>

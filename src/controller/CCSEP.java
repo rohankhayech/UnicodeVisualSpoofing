@@ -12,10 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import src.model.Forum;
-//import src.resources.login;
-//import src.controller.LoginController;
 /**
- *
+ * 
  * @author Jayden Tan
  */
 public class CCSEP extends Application {
