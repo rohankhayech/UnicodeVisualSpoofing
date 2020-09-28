@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package src.controller;
+package src.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,8 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import src.controller.App;
 import src.model.Forum;
-//import src.controller.App;
 import src.model.InvalidLoginException;
 import src.model.RegistrationException;
 
@@ -44,7 +39,7 @@ public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
     @FXML
-    private TextField loginError;
+    private Text loginError;
     @FXML
     private Button registerButton;
     @FXML
@@ -56,7 +51,7 @@ public class LoginController implements Initializable {
     @FXML
     private TextField confirmPassRegister;
     @FXML
-    private TextField registerError;
+    private Text registerError;
 
     /**
      * Initializes the controller class.
@@ -70,13 +65,15 @@ public class LoginController implements Initializable {
     private void handleLogin(ActionEvent event) {
         // Call relevent login methods and display forum page if successful
         try {
+            loginError.setText("");
+            registerError.setText("");
             app.login(userLogin.getText(), passLogin.getText());
             userLogin.clear();
             passLogin.clear();
 
             //Loads up the forum FXML
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("forum.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/forum.fxml"));
                 Parent root = loader.load();
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
@@ -113,8 +110,12 @@ public class LoginController implements Initializable {
     private void handleRegister(ActionEvent event) {
         // Call registerUser() to successfully create a new user IF passwords are a match
         try {
+            loginError.setText("");
+            registerError.setText("");
+
             app.registerUser(userRegister.getText(), passRegister.getText(), confirmPassRegister.getText());
             registerError.setText("User successfully registered.");
+            
             userRegister.clear();
             passRegister.clear();
             confirmPassRegister.clear();

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.controller;
+package src.view;
 
 import java.net.URL;
 import java.util.List;
@@ -17,6 +17,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import src.controller.App;
+import src.controller.UnauthorizedUserException;
 import src.model.Forum;
 import src.model.Post;
 
@@ -27,13 +29,12 @@ import src.model.Post;
  * @author Rohan Khayech
  */
 
-public class ForumController implements Initializable 
-{
+public class ForumController implements Initializable {
 
     App app;
     Forum forum;
     List<Post> postList;
-    
+
     @FXML
     private Label usernameLabel;
 
