@@ -31,6 +31,7 @@ import src.model.RegistrationException;
 public class LoginController implements Initializable {
 
     App app;
+    Forum forum;
 
     @FXML
     private Text userText;
@@ -77,11 +78,9 @@ public class LoginController implements Initializable {
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
 
-                Forum forum = new Forum();
-                App forumApp = new App(forum);
-
                 ForumController forumController = (ForumController) loader.getController();
-                forumController.setApp(forumApp);
+                forumController.setApp(app);
+                forumController.setForum(forum);
                 
                 stage.setTitle("Forum (Vulnerable)");
                 stage.setScene(scene);
@@ -102,7 +101,7 @@ public class LoginController implements Initializable {
         // Call registerUser() to successfully create a new user IF passwords are a match
         try {
             app.registerUser(userRegister.getText(), passRegister.getText(), confirmPassRegister.getText());
-            registerError.setText("User successfully Registered");
+            registerError.setText("User successfully registered.");
         } catch (RegistrationException e) {
             registerError.setText(e.getMessage());
         }    
@@ -111,6 +110,10 @@ public class LoginController implements Initializable {
 
     public void setApp(App app) {
         this.app = app;
+    }
+
+    public void setForum(Forum forum) {
+        this.forum = forum;
     }
     
     

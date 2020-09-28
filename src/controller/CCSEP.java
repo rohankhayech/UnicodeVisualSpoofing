@@ -32,6 +32,7 @@ public class CCSEP extends Application {
 
         LoginController loginController = (LoginController) loader.getController();
         loginController.setApp(app);
+        loginController.setForum(forum);
 
         Scene scene = new Scene(root, 900, 600);
         

@@ -41,16 +41,16 @@ import src.model.Post;
     
         @FXML
         void handlePost(ActionEvent event) {
-            /*try {
+            try {
                 app.publishPost(postField.getText());
                 postList = forum.getPosts();
                 for (Post post: postList)
                 {
                     forumField.setText(post.getBody());
                 }
-            } catch (Exception e) {
+            } catch (UnauthorizedUserException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
     
     
