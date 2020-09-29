@@ -116,7 +116,7 @@ public class UnitTestApp
 		test("Convert Post Body from Unicode to Punycode - www.аррӏеstore.com");
 		try {
 			app.publishPost("www.аррӏеstore.com");
-			Post p = forum.getPosts().get(1);
+			Post p = forum.getPosts().get(2);
 			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("www.xn--store-3ve9a1fa44l.com"), "Post not converted to punycode: " + p.getBody());
 			if (debug) {
 				System.out.println("Post Body: "+p.getBody());
