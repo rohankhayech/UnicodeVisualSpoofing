@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 import src.model.Forum;
 import src.view.LoginController;
 /**
- * 
+ * Class responsible for initializing the view and opening the windowed application.
  * @author Jayden Tan
  */
-public class CCSEP extends Application {
+public class ViewController extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -35,10 +35,7 @@ public class CCSEP extends Application {
 
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    public static void open(String[] args) {
         launch(args);
     }
     

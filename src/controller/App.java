@@ -1,5 +1,6 @@
 package src.controller;
 
+import src.model.EmptyFieldException;
 import src.model.Forum;
 import src.model.InvalidLoginException;
 import src.model.PasswordMismatchException;
@@ -35,7 +36,6 @@ public class App {
      */
     public void login(String username, String password) throws InvalidLoginException {
         currentUser = forum.provideLogin(username, password);
-        System.out.println("User Logged in");
     }
 
     /**
@@ -68,7 +68,11 @@ public class App {
      */
     public void registerUser(String username, String password, String confirmPassword) throws RegistrationException {
         if (password.equals(confirmPassword)) {    
-            forum.addUser(username, password);
+            if (!username.equals("") && !password.equals("")) {
+                forum.addUser(username, password);
+            } else {
+                throw new EmptyFieldException();
+            }
         } else {
             throw new PasswordMismatchException();
         }

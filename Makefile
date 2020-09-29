@@ -5,17 +5,17 @@ APP=isec3004.assignment
 all: build
 
 build:
-	docker build --rm --tag=$(APP) .
-	docker image prune -f
+	#docker build --rm --tag=$(APP) .
+	#docker image prune -f
 
 test:
-	docker run -it --rm $(APP) python manage.py test
+	#docker run -it --rm $(APP) python manage.py test
 
 run:
-	docker run -p 0.0.0.0:8000:8000/tcp -it --rm $(APP)
+	#docker run -p 0.0.0.0:8000:8000/tcp -it --rm $(APP)
 
 clean:
-	docker image rm $(APP)
-	docker system prune
+	#docker image rm $(APP)
+	#docker system prune
 
 .PHONY: all test clean
