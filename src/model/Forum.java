@@ -1,5 +1,6 @@
 package src.model;
 
+import java.net.IDN;
 import java.util.*;
 
 /**
@@ -97,8 +98,38 @@ public class Forum {
      */
     public void addPost(User author, String body) {
         if (users.contains(author)) {
-            Post p = new Post(author,body); // Vulnerable app performs no sanitization/conversion of post text.
+            String filteredBody = filterIDNs(body);
+            Post p = new Post(author,filteredBody); // Patched app converts URLs in post text to punycode.
             posts.add(p);
         }
     } 
+
+    /**
+     * Detects any Internationalized Domain Names in the given string and converts them to punycode.
+     * Unicode characters that are not part of a URL will remain without conversion.
+     * @param str The string to filter.
+     * @return The filtered string.
+     */
+    public String filterIDNs(String str) {
+        String filteredStr="";
+        String[] words = str.split(" ");
+        for(String word : words) {
+            //detect if word is a website
+            if (word.contains("www.") 
+                || word.contains("http://") 
+                || word.contains("https://") 
+                || word.contains(".co") //.co, .com
+                || word.contains(".org")
+                || word.contains(".net")
+                || word.contains(".org")
+                || word.contains(".info"))
+                //more prefixes/suffixes could be added here as needed
+            {
+                filteredStr += IDN.toASCII(word, IDN.ALLOW_UNASSIGNED) + " "; //convert IDN to punycode format
+            } else {
+                filteredStr += word + " ";  //allow unicode characters if not part of a URL
+            }
+        }
+        return filteredStr;
+    }
 }

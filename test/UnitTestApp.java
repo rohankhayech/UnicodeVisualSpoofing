@@ -97,18 +97,18 @@ public class UnitTestApp
 
 		test("Add Post - Hello World");
 		try {
-			app.publishPost("Hello World");
+			app.publishPost("Hello World ");
 			Post p = forum.getPosts().get(0);
-			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("Hello World"),"Post incorrect: "+p.toString());
+			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("Hello World "),"Post incorrect: "+p.toString());
 		} catch (Exception e2) {
 			fail(e2.getMessage());
 		}
 
 		test("Add Post - Example Post");
 		try {
-			app.publishPost("Example Post");
+			app.publishPost("Example Post ");
 			Post p = forum.getPosts().get(1);
-			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("Example Post"),"Post incorrect: "+p.toString());
+			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("Example Post "),"Post incorrect: "+p.toString());
 		} catch (Exception e2) {
 			fail(e2.getMessage());
 		}
@@ -117,7 +117,7 @@ public class UnitTestApp
 		try {
 			app.publishPost("www.аррӏеstore.com");
 			Post p = forum.getPosts().get(2);
-			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("www.xn--store-3ve9a1fa44l.com"), "Post not converted to punycode: " + p.getBody());
+			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("www.xn--store-3ve9a1fa44l.com "), "Post not converted to punycode: " + p.getBody());
 			if (debug) {
 				System.out.println("Post Body: "+p.getBody());
 			}
