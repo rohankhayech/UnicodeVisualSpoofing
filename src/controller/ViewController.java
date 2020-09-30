@@ -29,7 +29,7 @@ public class ViewController extends Application {
 
         Scene scene = new Scene(root, 900, 600);
         
-        stage.setTitle("Login (Vulnerable)");
+        stage.setTitle("Login (Patched)");
         stage.setScene(scene);
         stage.show();
 

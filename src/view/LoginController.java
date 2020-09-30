@@ -81,7 +81,7 @@ public class LoginController implements Initializable {
                 forumController.setForum(forum);
                 forumController.setup();
                 
-                stage.setTitle("Forum (Vulnerable)");
+                stage.setTitle("Forum (Patched)");
                 stage.setScene(scene);
 
                 //Hide the current window
