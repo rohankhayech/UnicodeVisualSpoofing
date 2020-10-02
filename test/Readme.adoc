@@ -1,7 +1,0 @@
-= Tests
-
-This directory includes the tests for the app. 
-
-Includes::
-. UnitTestApp.java - Tests app functionality.
-. UnitTestConversion.java - Tests vulnerability (users posting IDNs on the forum.)

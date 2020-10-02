@@ -5,7 +5,7 @@ import src.model.*;
 
 /**
  * Test Harness for converting IDN's in the post body to punycode.
- * Test harness created using modified framework previously created and submitted for DSA by Rohan Khayech
+ * Test harness created using modified generic test harness framework previously created and submitted for DSA by Rohan Khayech 
  * 
  * @author Rohan Khayech
  */

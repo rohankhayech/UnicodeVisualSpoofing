@@ -5,7 +5,7 @@ import src.model.*;
 
 /**
  * Test Harness for the web forum app. 
- * Test harness created using modified framework previously created and submitted for DSA by Rohan Khayech
+ * Test harness created using modified generic test harness framework previously created and submitted for DSA by Rohan Khayech 
  * 
  * @author Rohan Khayech
  */
