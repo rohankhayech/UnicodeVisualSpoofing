@@ -1,21 +1,11 @@
-# A sample Makefile to use make command to build, test and run the program
-# Guide: https://philpep.org/blog/a-makefile-for-your-dockerfiles/
-APP=isec3004.assignment
-
 all: build
 
 build:
-	#docker build --rm --tag=$(APP) .
-	#docker image prune -f
+	javac --module-path javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml src/controller/*.java src/view/*.java src/model/*.java
 
-test:
-	#docker run -it --rm $(APP) python manage.py test
 
 run:
-	#docker run -p 0.0.0.0:8000:8000/tcp -it --rm $(APP)
+	java --module-path javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml src/controller/Main
 
 clean:
-	#docker image rm $(APP)
-	#docker system prune
-
-.PHONY: all test clean
+	rm src/controller/*.class src/view/*.class src/model/*.class test/*.class
