@@ -13,12 +13,7 @@ import uvs.model.Post;
 import uvs.model.UsernameTakenException;
 
 /**
-<<<<<<< HEAD:test/UnitTestApp.java
- * Test Harness for the web forum app. 
- * Test harness created using modified generic test harness framework previously created and submitted for DSA by Rohan Khayech 
-=======
  * Test Harness for the web forum app.
->>>>>>> gradle_support:app/src/test/java/uvs/UnitTestApp.java
  * 
  * @author Rohan Khayech
  */

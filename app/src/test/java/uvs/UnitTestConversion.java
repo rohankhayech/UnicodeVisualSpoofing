@@ -10,11 +10,6 @@ import uvs.model.Post;
 
 /**
  * Test Harness for converting IDN's in the post body to punycode.
-<<<<<<< HEAD:test/UnitTestConversion.java
- * Test harness created using modified generic test harness framework previously created and submitted for DSA by Rohan Khayech 
- * 
-=======
->>>>>>> gradle_support:app/src/test/java/uvs/UnitTestConversion.java
  * @author Rohan Khayech
  */
 public class UnitTestConversion
