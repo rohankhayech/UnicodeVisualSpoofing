@@ -37,4 +37,4 @@ Users may still use unicode characters to express themselves without conversion 
 
 ## License
 
-See link:LICENSE[]
+See LICENSE.
