@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Jayden Tan
+ */
+
 package uvs.view;
 
 import java.net.URL;

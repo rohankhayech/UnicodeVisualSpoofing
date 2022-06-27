@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Rohan Khayech. Jayden Tan, Lara Ahmad Salem, Nelson Li
+ */
+
 package uvs.controller;
 
 /**

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Rohan Khayech 
+ */
+
 package uvs.model;
 
 import java.util.*;
