@@ -1,6 +1,6 @@
-= ISEC3004 assignment
+= Unicode Visual Spoofing Demo Program
 
-== Demo Program by
+== Authors
 - Jayden Tan
 - Rohan Khayech
 - Lara Ahmad Salem
@@ -18,15 +18,13 @@ The program must be run on a Linux system and assumes that JDK 11.0.8 is install
 
 To run the main program enter:
 
-    make run
+    gradle run
 
-To run the app functionality test enter:
+To run the app functionality (UnitTestApp) and vulnerability patch (UnitTestConversion) tests enter:
     
-    make test
-
-To run the vulnerability patch test enter:
-
-    make test-patch
+    gradle test
+    
+The app functionality tests should pass on both branches, while the vulnerability patch test should only pass on the patch branch, and fail on the master branch.
 
 == Detection, Explotation and Patching Vulnerability
 To detect the vulnerability, we have checked for common URL prefixes (www.), suffixes (.com, .net etc.) and protocol prefixes (http://, https://) to detect any links posted in the forum.
