@@ -125,11 +125,7 @@ public class UnitTestApp
 		try {
 			app.publishPost("www.аррӏеstore.com");
 			Post p = forum.getPosts().get(2);
-<<<<<<< HEAD:test/UnitTestApp.java
 			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("www.xn--store-3ve9a1fa44l.com "), "Post not converted to punycode: " + p.getBody());
-=======
-			passIf(p.getAuthor().getUsername().equals("User 1") && p.getBody().equals("www.xn--store-3ve9a1fa44l.com"), "Post not converted to punycode: " + p.getBody());
->>>>>>> gradle_support:app/src/test/java/uvs/UnitTestApp.java
 			if (debug) {
 				System.out.println("Post Body: "+p.getBody());
 			}
